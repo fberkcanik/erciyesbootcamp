@@ -1,0 +1,75 @@
+<style>
+    nav{
+        background-color: #2C3D4F;
+        height:50px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        padding-left: 150px;
+        padding-right: 150px;
+        align-items: center;
+    }
+    nav a{
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        
+    }
+    nav a:hover{
+        color:#19BC9B;
+    }
+    h1{
+        color: #fff;
+        font-size: 1.75em;
+        font-weight: bold;
+    }
+    nav ul{
+        display: flex;
+        flex-direction: row;
+       
+    }
+    nav li {
+        margin-right: 15px;
+    }
+    header{
+        background-color: #19BC9B;
+        padding-top: 75px;
+        padding-bottom: 75px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 30px;
+    }
+    header h1{
+        font-size: 4rem;
+    }
+    header img {
+        width: 200px;
+        
+    }
+    header p {
+        color: white;
+        font-size: 1.5em;
+    }
+    .divider{
+        width: 500px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    .divider svg{
+        width: 32px;
+        color: white;
+    }
+    .line{
+        width: 200px;
+        height: 5px;
+        background-color: white;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+</style>
