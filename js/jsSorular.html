@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js sorular</title>
+</head>
+<body>
+  
+    
+    <script>
+        var ilksorutoplam = 0;
+        var ikincitoplam = 0;
+        var toplam = 0;
+        var sayac = 0;
+        var dorduncucevap = [];
+
+        // 1. soru
+        for(i = 0; i<200; i++){
+            ilksorutoplam += i;
+        }
+        // 2.soru
+       for(a = 25; a<125; a++){
+        ikincitoplam += a;
+       }
+       // 3.soru
+       for(b=1; b<=1000; b++){
+        toplam += b;
+        sayac++;
+       }
+       // 4.soru
+       for(c = 0; c<=100; c++){
+        if(c % 5 == 0){
+            dorduncucevap.push(c);
+        }
+       }
+
+      
+       
+       ortalama = toplam / sayac;
+       console.log("1. "+ilksorutoplam)
+       console.log("2. "+ikincitoplam)
+      
+       console.log("3. "+ortalama)
+       console.log("4. "+ dorduncucevap )
+        // 5. soru
+       var numbers = [33, 11, -5, 20, 1, 55, 100, 2, 94, 55, 11]
+       var smallest = numbers.sort();
+       console.log("En küçük: "+ smallest[0]);
+       var biggest = numbers[10]
+       console.log("En büyük: "+ biggest);
+       
+   
+       
+       
+
+    </script>
+</body>
+</html>
