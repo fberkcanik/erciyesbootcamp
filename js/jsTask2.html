@@ -1,0 +1,66 @@
+<!-- “  Çağatay Yıldız” isimli metindeki boşlukları kaldır.    (REPLACE)
+
+
+“cagatay yildiz” kelimesindeki boşlukları temizle ve tüm harfleri büyült ( REPLACE ve UPPER)
+“******Çağatay Yıldız” isimli metindeki yıldızları kaldır (REPLACE)
+“Çağatay  Yıldız” metnindeki kelimeler arasında 2 boşluk var bunu bir boşluk yap (REPLACE)
+“**Tech Career**” isimli metindeki yıldızları kaldır (REPLACE)
+“Tech Career” isimli metnin soluna ve sağına 3 yıldız koy. “***Tech Career***” ( Normal toplama operatörü)
+
+“Tech Career Bilişim teknolojileri” metnindeki son kelimeyi büyült (SUBSTRING)
+“Tech Career” kelimelerin ilk harflerini büyült (Substring ve upper) -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 2</title>
+</head>
+
+<body>
+    <script>
+        let str = "Çağatay Yıldız";
+        // Boşluktan kurtulma
+        const result1 = str.replace(" ", '');
+        console.log(result1);
+
+        let str1 = "cagatay yildiz";
+        // Kelimeler arasındaki boşluğu bir boşlukla değiştirme ve büyütme
+        const result2 = str1.replace(" ", "").toUpperCase();
+        console.log(result2);
+
+        let str2 = "******Çağatay Yıldız";
+        // Yıldızları kaldırma
+        const result3 = str2.replaceAll("*", "");
+        console.log(result3)
+
+        let str3 = "Çağatay  Yıldız";
+        // Boşluğu bir boşlukla değiştirme
+        const result4 = str3.replace("  ", " ");
+        console.log(result4)
+
+        let str4 = "**Tech Career**";
+        // Yıldızları kaldırma
+        const result5 = str4.replaceAll("**", "");
+        console.log(result5);
+
+        let str5 = "Tech Career";
+        // Başına ve sonuna yıldız ekleme
+        const result6 = "***"+str5+"***";
+        console.log(result6);
+
+        let str6 = "Tech Career Bilişim teknolojileri";
+        // Son kelimeyi büyük harfe çevir
+        const result7 = str6.substring(20,33).toUpperCase()
+        console.log(result7)
+
+        let str7 = "tech career";
+        //  ilk harfleri büyült
+        const result8 = str7.substr(0,1).toUpperCase() + str7.substr(1,4) + str7.substr(5,1).toUpperCase() + str7.substr(6,5);
+        console.log(result8);
+    </script>
+</body>
+
+</html>
