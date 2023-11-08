@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider</title>
+    <style>
+        #slider {
+            width: 500px;
+            height: auto;
+            overflow: hidden;
+            margin-bottom: 50px;
+
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <section id="slider">
+            <img src="https://randomwordgenerator.com/img/picture-generator/5fe8d1474f55b10ff3d8992cc12c30771037dbf85254794e722a72d69749_640.jpg"
+                alt="" />
+            <img style="display: none;" src="https://randomwordgenerator.com/img/picture-generator/57e0d643425aa814f1dc8460962e33791c3ad6e04e507440712f7bd5904bc1_640.jpg"
+                alt="" />
+            <img style="display: none;" src="https://randomwordgenerator.com/img/picture-generator/53e2d2454a56ac14f1dc8460962e33791c3ad6e04e507440772d7cdd914ec6_640.jpg"
+                alt="" />
+            <img style="display: none;" src="https://randomwordgenerator.com/img/picture-generator/55e8d4474c50a514f1dc8460962e33791c3ad6e04e507440762879dc9144c2_640.jpg"
+                alt="" />
+
+        </section>
+        <div class="btns">
+            <button onclick="back()">
+                < </button>
+                    <button onclick="stopSlider()">Durdur</button>
+                    <button onclick="forward()">></button>
+        </div>
+    </div>
+
+
+
+    <script>
+        let slideIndex = 0; 
+        const slides = document.querySelectorAll('#slider img');
+        const maxSlide = slides.length - 1;
+        let autoSlideInterval; 
+
+        function startSlider() {
+
+            autoSlideInterval = setInterval(forward, 3000);
+        }
+
+        function stopSlider() {
+            clearInterval(autoSlideInterval);
+        }
+
+        function showImage() {
+            for (let i = 0; i <= maxSlide; i++) {
+                slides[i].style.display = 'none';
+            }
+            slideIndex++;
+            if (slideIndex > maxSlide) {
+                slideIndex = 0;
+            }
+            slides[slideIndex].style.display = "block";
+        }
+
+        function back() {
+            slides[slideIndex].style.display = 'none';
+            slideIndex--;
+            if (slideIndex < 0) {
+                slideIndex = maxSlide;
+            }
+            slides[slideIndex].style.display = 'block';
+            stopSlider();
+            startSlider();
+        }
+
+        function forward() {
+            slides[slideIndex].style.display = 'none';
+            slideIndex++;
+            if (slideIndex > maxSlide) {
+                slideIndex = 0;
+            }
+            slides[slideIndex].style.display = 'block';
+            stopSlider();
+            startSlider();
+        }
+
+        startSlider();   
+
+
+    </script>
+</body>
+
+</html>
