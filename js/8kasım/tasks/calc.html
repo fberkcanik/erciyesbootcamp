@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hesaplayıcı</title>
+    <style>
+        .container{
+            display: flex;
+            flex-direction: row;
+        }
+        .left{
+            width: 800px;
+           
+        }
+        .inputs{
+            display: flex;
+            flex-direction: column;
+            font-size: 20px;
+        }
+        .buttons{
+            margin-top: 25px;
+            display: flex;
+            justify-content: space-between;
+        }
+        #val1, #val2{
+            height: 50px;
+            margin-bottom: 20px;
+        }
+        button{
+            padding: 7px 30px;
+            border: none;
+            width: 150px;
+            height: 100px;
+            font-size: 20px;
+        }
+        button:hover{
+            background-color: green;
+            color: white;
+        }
+        .right{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            margin-left: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left">
+            <div class="inputs">
+                <label for="val1">İlk sayıyı girin:</label>
+                <input type="text" id="val1">
+                <label for="val1">İkinci sayıyı girin:</label>
+                <input type="text" id="val2">
+            </div>
+            <div class="buttons">
+                <button onclick="islem('topla')">Topla</button>
+                <button onclick="islem('cikar')">Çıkar</button>
+                <button onclick="islem('carp')">Çarp</button>
+                <button onclick="islem('bol')">Böl</button>
+                <button onclick="islem('karekok')">Karekök</button>
+            </div>
+        </div>
+        <div class="right">
+            <h1 id="sonuc">0</h1>
+        </div>
+    </div>
+   <script>
+    function islem(tip){
+        var val1 = document.getElementById("val1").value;
+        var val2 = document.getElementById("val2").value;
+
+       switch (tip) {
+        case "topla":
+            document.getElementById("sonuc").innerText = parseInt(val1) + parseInt(val2)
+            break;
+       
+        case "cikar":
+            document.getElementById("sonuc").innerText = parseInt(val1) - parseInt(val2)
+            break;
+       
+        case "carp":
+            document.getElementById("sonuc").innerText = parseInt(val1) * parseInt(val2)
+            break;
+       
+        case "bol":
+            document.getElementById("sonuc").innerText = parseInt(val1) / parseInt(val2)
+            break;
+       
+        case "karekok":
+            document.getElementById("sonuc").innerText = "Birinci sayının karekökü: "+ Math.sqrt(parseInt(val1)) + " İkinci sayının karekökü: " + Math.sqrt(parseInt(val2))
+            break;
+       
+        default:
+            break;
+       }
+
+    }
+   </script>
+</body>
+</html>
