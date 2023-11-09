@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Arrays</title>
+</head>
+<body>
+    <ul></ul>
+    <script>
+        var people = [
+            {
+                id: 1,
+                name: "John",
+                surname: "Doe",
+                age: 30
+            },
+            {
+                id: 2,
+                name: "Jane",
+                surname: "Doe",
+                age: 25
+            },
+            {
+                id: 3,
+                name: "James",
+                surname: "Doe",
+                age: 20
+            },
+            {
+                id: 4,
+                name: "Judy",
+                surname: "Doe",
+                age: 15
+            }
+        ];
+
+        var categories = [
+            {
+                id : 1,
+                name : "Beverages",
+                description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum."
+            },
+            {
+                id : 2,
+                name : "Condiments",
+                description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum."
+            },
+            {
+                id : 3,
+                name : "Confections",
+                description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum."
+            },
+            {
+                id : 4,
+                name : "Dairy Products",
+                description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum."
+            },
+            {
+                id : 5,
+                name : "Grains/Cereals",
+                description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum."
+            },
+            {
+                id : 6,
+                name : "Meat/Poultry",
+                description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum."
+            },
+            {
+                id : 7,
+                name : "Produce",
+                description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum."
+            },
+            {
+                id : 8,
+                name : "Seafood",
+                description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum."
+            }
+        ]
+       var ul = document.querySelector("ul");
+       categories.forEach(item => {
+              var li = document.createElement("li");
+              li.innerHTML = item.id + "-" +item.name + "-" + item.description;
+              ul.appendChild(li);
+         
+       })
+    
+    </script>
+</body>
+</html>
