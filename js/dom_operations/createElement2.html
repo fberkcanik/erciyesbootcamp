@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+
+    </ul>
+
+    <script>
+        var countries = ["Türkiye", "Almanya", "İngiltere"];
+        var ul = document.querySelector('ul');
+        countries.forEach((country) => {
+            var li = document.createElement('li');
+            li.textContent = country;
+            ul.appendChild(li);
+        
+        })
+    </script>
+</body>
+</html>

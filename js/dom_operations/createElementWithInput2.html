@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="">
+        <label for="width">Genişlik:</label>
+        <input type="text" name="" id="width">
+    </div>
+    <div class="">
+        <label for="height">Yükseklik:</label>
+        <input type="text" name="" id="height">
+    </div>
+    <div class="">
+        <button onclick="create()">Oluştur</button>
+    </div>
+
+    <script>
+        function create(){
+            var width = document.querySelector('#width').value;
+            var height = document.querySelector('#height').value;
+            if((width === '' || height === '') && (isNaN(width) && isNaN(height))) return;
+            var div = document.createElement('div');
+            div.style.width = width + 'px';
+            div.style.height = height + 'px';
+            div.style.backgroundColor = 'red';
+            document.body.appendChild(div);
+        }
+    </script>
+</body>
+</html>
