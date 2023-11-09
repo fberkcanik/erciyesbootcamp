@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Add</title>
+</head>
+<body>
+    <button onclick="ekle()">Ekle</button>
+    <ul></ul>
+
+    <script>
+        function ekle(){
+           
+            var existingLi = document.querySelectorAll("li");
+            var number = Math.floor(Math.random() * 100);
+             
+            if((!existingLi || checkMatch(existingLi, number) == false) && existingLi.length  < 15 ){
+                addNumber(number);
+                return;
+            }
+        }
+        function checkMatch(list, number){
+            
+            for(var i = 0; i < list.length; i++){
+                if(list[i].innerHTML == number){
+                    return true;
+                }
+            }
+            return false;
+        }
+        function addNumber(number){
+            var ul = document.querySelector("ul");
+            var li = document.createElement("li");
+            li.innerHTML = number;
+            ul.appendChild(li);
+        }
+    </script>
+</body>
+</html>
