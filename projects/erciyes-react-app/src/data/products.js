@@ -1,4 +1,4 @@
-[
+export let products = [
     {
     "id": 5,
     "supplierId": 2,
