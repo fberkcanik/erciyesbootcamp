@@ -1,10 +1,18 @@
 import logo from './logo.svg';
-import './App.css';
-import Header from './component/Header';
-
+import './App.css'; 
+import {Routes,Route, BrowserRouter} from "react-router-dom";
+import Products from "./pages/Products";
+import Detail from "./pages/Details";
 function App() {
   return (
-    <Header></Header>
+     <>
+     <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Products/>}/>
+        <Route path="/detail/:id" element={<Detail/>}/>
+      </Routes>
+     </BrowserRouter>
+     </>
     
   );
 }
