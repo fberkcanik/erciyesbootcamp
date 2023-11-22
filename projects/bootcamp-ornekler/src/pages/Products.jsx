@@ -34,7 +34,13 @@ function Products() {
     <>
     {
         loading ? <div>Loading...</div> : 
-        <><h3>Count: {products.length}</h3>
+        <>
+        <ul style={{display: 'flex', justifyContent:'space-around', listStyle: 'none'}}>
+            <li><Link to={"/"}>Product Sample</Link></li>
+            <li><Link to={"/posts"}>Posts Sample</Link></li>
+         
+        </ul>
+        <h3>Count: {products.length}</h3>
         <table style={{width: '100%', tableLayout: 'auto', textAlign: 'center'}}>
             <thead>
                 <tr>
